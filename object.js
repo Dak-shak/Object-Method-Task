@@ -16,20 +16,26 @@ console.log( Object.assign(personelInfo, personelInfo2))
 
 
 //  log product keys and Value
-console.log(Object.keys(personelInfo))
-console.log(Object.values(personelInfo))
+let products = {
+    product1: "pefume",
+    product2: "cream"
+}
+console.log(products)
+console.log(Object.keys(products))
+console.log(Object.values(products))
 
 
 
 // freeze setting object
 
-let obj={
+let settings ={
     theme: "Dark",
     Notification: true
 }
 
-Object.freeze(obj)
- if(Object.isFrozen(obj)){
+Object.freeze(settings)
+
+ if(Object.isFrozen(settings)){
     console.log("is a dark mode")
  }else{
     console.log("change to light mode")
