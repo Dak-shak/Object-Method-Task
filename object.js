@@ -18,11 +18,18 @@ console.log( Object.assign(personelInfo, personelInfo2))
 //  log product keys and Value
 let products = {
     product1: "pefume",
-    product2: "cream"
+    product2: "cream",
+    product3: "clothes",
+    product4: "food"
 }
-console.log(products)
-console.log(Object.keys(products))
-console.log(Object.values(products))
+let keys = Object.keys(products)
+let values = Object.values(products)
+
+console.log(keys, values)
+
+keys.forEach((key, i) =>{
+    console.log(`${key}: ${values[i]}`)
+})
 
 
 
@@ -33,7 +40,9 @@ let settings ={
     Notification: true
 }
 
-Object.freeze(settings)
+Object.freeze(settings);
+
+settings.theme = "white"
 
  if(Object.isFrozen(settings)){
     console.log("is a dark mode")
